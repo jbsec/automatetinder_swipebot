@@ -2,7 +2,6 @@
 from selenium import webdriver
 from time import sleep
 
-from secrets import username, password
 
 class TinderBot():
     def __init__(self):
@@ -24,10 +23,12 @@ class TinderBot():
         
         email_in = self.driver.find_element_by_xpath
             ('//*[@id="email"]')
+        username=input("Please enter your username:")
         email_in.send_keys(username)
 
         pw_in = self.driver.find_element_by_xpath
             ('//*[@id="pass"')
+        password=input("Please enter your password:")
         pw_in.send_keys(password)
 
         login_btn = self.driver.find_element_by_xpath
